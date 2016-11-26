@@ -6,13 +6,12 @@
         <div>
             <h1> 2016 / 11 / 26 </h1>
         </div>
+       {% for post in posts %}
         <div>
-            <p> Hello world!</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>published: {{ post.published_date }}</p>
         </div>
-        <div>
-            <h2><a href=""> 장고 걸스 모임 </a> </h2>
-            <p> 꺄 </p>
-        </div>
-       
+        {% endfor %}
     </body>
 </html>
